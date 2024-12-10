@@ -1,0 +1,43 @@
+{
+	"name": "AzureSqlProduct",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseYogesh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ProductID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SKU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Category",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Subcategory",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ManufacturingSpecifications",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ProductDimension"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

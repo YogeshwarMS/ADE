@@ -1,0 +1,38 @@
+{
+	"name": "AzureSqlSupplierO",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseYogesh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "OrderID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SupplierID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "OrderDate",
+				"type": "date"
+			},
+			{
+				"name": "TotalCost",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SupplierOrders"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

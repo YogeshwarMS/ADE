@@ -1,0 +1,20 @@
+{
+	"name": "AzureSqlparameterized",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseYogesh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "Inventory",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

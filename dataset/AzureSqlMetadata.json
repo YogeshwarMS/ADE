@@ -1,0 +1,33 @@
+{
+	"name": "AzureSqlMetadata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseYogesh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "TableName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LastProcessedID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LastRunTimestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ETL_Metadata"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

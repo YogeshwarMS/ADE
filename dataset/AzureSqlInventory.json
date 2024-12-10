@@ -1,0 +1,38 @@
+{
+	"name": "AzureSqlInventory",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseYogesh",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "InventoryID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ProductID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StockLevel",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			},
+			{
+				"name": "LastUpdated",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Inventory"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
