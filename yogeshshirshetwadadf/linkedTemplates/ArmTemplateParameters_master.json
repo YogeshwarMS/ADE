@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "yogeshshirshetwadadf"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeYogesh_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabaseYogesh_password": {
+			"value": ""
+		},
+		"adeprojectsourcelinkedservice_accountKey": {
+			"value": ""
+		},
+		"localdb_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://yogeshshirshetwadadls.dfs.core.windows.net/"
+		},
+		"AzureDataLakeYogesh_properties_typeProperties_url": {
+			"value": "https://yogeshshirshetwadadls.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "sushantserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "YogeshDb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "adminuser"
+		},
+		"AzureSqlDatabaseYogesh_properties_typeProperties_server": {
+			"value": "sushantserver.database.windows.net"
+		},
+		"AzureSqlDatabaseYogesh_properties_typeProperties_database": {
+			"value": "YogeshDb"
+		},
+		"AzureSqlDatabaseYogesh_properties_typeProperties_userName": {
+			"value": "adminuser"
+		},
+		"adeprojectsourcelinkedservice_properties_typeProperties_url": {
+			"value": "https://yogeshshirshetwadadls.dfs.core.windows.net/"
+		},
+		"localdb_properties_typeProperties_server": {
+			"value": "VELC-LT-95KYBL3\\SQLEXPRESS"
+		},
+		"localdb_properties_typeProperties_database": {
+			"value": "AdminDB"
+		},
+		"localdb_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

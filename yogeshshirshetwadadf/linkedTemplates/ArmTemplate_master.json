@@ -1,0 +1,168 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "yogeshshirshetwadadf"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeYogesh_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeYogesh'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabaseYogesh_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseYogesh'"
+		},
+		"adeprojectsourcelinkedservice_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'adeprojectsourcelinkedservice'"
+		},
+		"localdb_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'localdb'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://yogeshshirshetwadadls.dfs.core.windows.net/"
+		},
+		"AzureDataLakeYogesh_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://yogeshshirshetwadadls.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sushantserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "YogeshDb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adminuser"
+		},
+		"AzureSqlDatabaseYogesh_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sushantserver.database.windows.net"
+		},
+		"AzureSqlDatabaseYogesh_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "YogeshDb"
+		},
+		"AzureSqlDatabaseYogesh_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adminuser"
+		},
+		"adeprojectsourcelinkedservice_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://yogeshshirshetwadadls.dfs.core.windows.net/"
+		},
+		"localdb_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "VELC-LT-95KYBL3\\SQLEXPRESS"
+		},
+		"localdb_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdminDB"
+		},
+		"localdb_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "yogeshshirshetwadadf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeYogesh_accountKey": {
+						"value": "[parameters('AzureDataLakeYogesh_accountKey')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlDatabaseYogesh_password": {
+						"value": "[parameters('AzureSqlDatabaseYogesh_password')]"
+					},
+					"adeprojectsourcelinkedservice_accountKey": {
+						"value": "[parameters('adeprojectsourcelinkedservice_accountKey')]"
+					},
+					"localdb_password": {
+						"value": "[parameters('localdb_password')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeYogesh_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeYogesh_properties_typeProperties_url')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabaseYogesh_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabaseYogesh_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabaseYogesh_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabaseYogesh_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabaseYogesh_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabaseYogesh_properties_typeProperties_userName')]"
+					},
+					"adeprojectsourcelinkedservice_properties_typeProperties_url": {
+						"value": "[parameters('adeprojectsourcelinkedservice_properties_typeProperties_url')]"
+					},
+					"localdb_properties_typeProperties_server": {
+						"value": "[parameters('localdb_properties_typeProperties_server')]"
+					},
+					"localdb_properties_typeProperties_database": {
+						"value": "[parameters('localdb_properties_typeProperties_database')]"
+					},
+					"localdb_properties_typeProperties_userName": {
+						"value": "[parameters('localdb_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
